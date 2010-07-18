@@ -20,65 +20,65 @@ class rcS {
     }
 
     rcS_setting { TMPTIME:
-       value => $debian_rcS_tmptime ? {
+       value => $debian_rcs_tmptime ? {
           ""      => 7,
-          default => $debian_rcS_tmptime
+          default => $debian_rcs_tmptime
        }
     }
 
     rcS_setting { SULOGIN:
-       value => $debian_rcS_sulogin ? {
+       value => $debian_rcs_sulogin ? {
           ""      => true,
-          default => $debian_rcS_sulogin
+          default => $debian_rcs_sulogin
        }
     }
 
     rcS_setting { DELAYLOGIN:
-       value => $debian_rcS_delaylogin ? {
+       value => $debian_rcs_delaylogin ? {
           ""      => true,
-          default => $debian_rcS_delaylogin
+          default => $debian_rcs_delaylogin
        }
     }
 
     rcS_setting { UTC:
-       value => $debian_rcS_utc ? {
+       value => $debian_rcs_utc ? {
           ""      => true,
-          default => $debian_rcS_utc
+          default => $debian_rcs_utc
        }
     }
 
     rcS_setting { VERBOSE:
-       value => $debian_rcS_verbose ? {
+       value => $debian_rcs_verbose ? {
           ""      => false,
-          default => $debian_rcS_verbose
+          default => $debian_rcs_verbose
        }
     }
 
     rcS_setting { FSCKFIX:
-       value => $debian_rcS_fsckfix ? {
+       value => $debian_rcs_fsckfix ? {
           ""      => true,
-          default => $debian_rcS_fsckfix
+          default => $debian_rcs_fsckfix
        }
     }
 
     rcS_setting { RAMRUN:
-       value => $debian_rcS_ramrun ? {
+       value => $debian_rcs_ramrun ? {
           ""      => true,
-          default => $debian_rcS_ramrun
+          default => $debian_rcs_ramrun
        }
     }
 
     rcS_setting { RAMLOCK:
-       value => $debian_rcS_ramlock ? {
+       value => $debian_rcs_ramlock ? {
           ""      => true,
-          default => $debian_rcS_ramlock
+          default => $debian_rcs_ramlock
        }
     }
 
     rcS_setting { ASYNCMOUNTNFS:
-       value => $debian_rcS_asyncmountnfs ? {
+       value => $debian_rcs_asyncmountnfs ? {
           ""      => true,
-          default => $debian_rcS_asyncmountnfs
+          default => $debian_rcs_asyncmountnfs
        }
     }
 }
