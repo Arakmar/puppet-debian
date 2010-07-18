@@ -81,4 +81,16 @@ class rcS {
           default => $debian_rcs_asyncmountnfs
        }
     }
+
+    augeas { add-comment:
+        context => "/files/etc/default/rcS",
+        changes => [
+          "ins '#comment' after /files/etc/default/rcS/#comment[last()]",
+          "set /files/etc/default/rcS/#comment[last()] ''"
+          "ins '#comment' after /files/etc/default/rcS/#comment[last()]",
+          "set /files/etc/default/rcS/#comment[last()] 'THE INDIVIDUAL SETTINGS ARE MANAGED BY PUPPET'"
+        ],
+        onlyif  => "match /files/etc/default/rcS/*[. = 'THE INDIVIDUAL SETTINGS ARE MANAGED BY PUPPET'] size < 1",
+        require => Package["libaugeas-ruby1.8"]
+    }
 }
