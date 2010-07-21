@@ -28,7 +28,7 @@ class rcS {
 
     rcS_setting { SULOGIN:
        value => $debian_rcs_sulogin ? {
-          ""      => true,
+          ""      => false,
           default => $debian_rcs_sulogin
        }
     }
