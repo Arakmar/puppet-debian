@@ -8,6 +8,27 @@ Licence:   Artistic Licence 2.0
 This module manages various aspects of the Debian system. If you want all
 functionality at once, simply include the debian class in your manifest.
 
+debian::motd
+~~~~~~~~~~~~
+The module allows for easy management of the /etc/motd file, using the Debian
+Way to do so.
+
+There are four variables you can set on a per-host bases:
+
+$greeting_before_fqdn ["Welcome to "]
+  The initial greeting, which is followed by the host's FQDN.
+
+$lead [some warning about authorization]
+  The lead message, designed to provide a space for a common introductory
+  note.
+
+$headeritems []
+  An array of paragraphs to be printed after the lead.
+
+$newsitems []
+  An array of bullet points printed with special formatting to attract
+  attention.
+
 debian::rcs
 ~~~~~~~~~~~
 The module exposes a variable for each of the known /etc/default/rcS settings,
