@@ -47,7 +47,7 @@ class debian::rcs {
         ensure  => file,
         owner   => root,
         group   => root,
-        mode    => 644,
+        mode    => 444,
         content => template("debian/rcS")
     }
 }
