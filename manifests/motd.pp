@@ -45,6 +45,10 @@ class debian::motd {
         ""      => [],
         default => $debian_motd_newsitems
     }
+    $services = $debian_motd_services ? {
+        ""      => [],
+        default => $debian_motd_services
+    }
 
     include debian::motd::files, debian::motd::update
 }
