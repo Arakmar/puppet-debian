@@ -45,3 +45,12 @@ currently implemented like this [with defaults]:
   RAMRUN        [false]
   RAMLOCK       [false]
   ASYNCMOUNTNFS [false]
+
+debian::inittab_conf
+~~~~~~~~~~~~~~~~~~~~
+This defines allow to add new config entries in the /etc/inittab files
+
+$id
+$runlevels = '123456'
+$action = 'respawn'
+$process
