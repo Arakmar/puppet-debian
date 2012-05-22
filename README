@@ -46,9 +46,17 @@ currently implemented like this [with defaults]:
   RAMLOCK       [false]
   ASYNCMOUNTNFS [false]
 
+debian::alternatives
+~~~~~~~~~~~~~~~~~~~~
+This defines allows to define new link with the update-alternatives mecanism
+
+$name: The name of the alternative
+$linkto: The new link
+
+
 debian::inittab_conf
 ~~~~~~~~~~~~~~~~~~~~
-This defines allow to add new config entries in the /etc/inittab files
+This defines allows to add new config entries in the /etc/inittab files
 
 $id
 $runlevels = '123456'
