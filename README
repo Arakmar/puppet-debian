@@ -9,8 +9,9 @@ This module manages various aspects of the Debian system. If you want all
 functionality at once, simply include the debian class in your manifest.
 
 debian::motd
-~~~~~~~~~~~~
-The module allows for easy management of the /etc/motd file, using the Debian
+------------
+
+This class allows for easy management of the /etc/motd file, using the Debian
 Way to do so.
 
 There are four variables you can set on a per-host bases:
@@ -30,8 +31,9 @@ $newsitems []
   attention.
 
 debian::rcs
-~~~~~~~~~~~
-The module exposes a variable for each of the known /etc/default/rcS settings,
+-----------
+
+This class exposes a variable for each of the known /etc/default/rcS settings,
 so please check rcS(5). For instance, the TMPTIME variable can be set with
 $debian_rcs_tmptime (note the capitalisation). The following variables are
 currently implemented like this [with defaults]:
@@ -47,18 +49,29 @@ currently implemented like this [with defaults]:
   ASYNCMOUNTNFS [false]
 
 debian::alternatives
-~~~~~~~~~~~~~~~~~~~~
+--------------------
+
 This defines allows to define new link with the update-alternatives mecanism
 
-$name: The name of the alternative
-$linkto: The new link
+Example :
+
+	debian::alternatives { "editor" :
+		linkto => "/bin/nano",
+	}
 
 
 debian::inittab_conf
-~~~~~~~~~~~~~~~~~~~~
+--------------------
+
 This defines allows to add new config entries in the /etc/inittab files
 
 $id
 $runlevels = '123456'
 $action = 'respawn'
 $process
+
+debian::login_def
+-----------------
+
+This class manage the /etc/login.def file.
+Right now, only the umask is handled.

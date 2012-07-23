@@ -1,4 +1,4 @@
- class debian::login_def {
+class debian::login_def {
 
     $umask = $debian_umask ? {
         ""      => 022,
