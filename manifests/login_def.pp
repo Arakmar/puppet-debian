@@ -1,9 +1,6 @@
-class debian::login_def {
-
-    $umask = $debian_umask ? {
-        ""      => 022,
-        default => $debian_umask
-    }
+class debian::login_def(
+    $umask = 022
+) {
 
     file { "/etc/login.defs":
         ensure  => file,
