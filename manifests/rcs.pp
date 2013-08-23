@@ -20,6 +20,6 @@ class debian::rcs(
         owner   => root,
         group   => root,
         mode    => 444,
-        content => template("debian/rcS")
+        content => template("debian/rcS.${::operatingsystem}-${::lsbdistcodename}.erb")
     }
 }
