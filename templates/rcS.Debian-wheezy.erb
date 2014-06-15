@@ -6,12 +6,12 @@
 #
 # THIS FILE IS MANAGED BY PUPPET; CHANGES WILL BE OVERWRITTEN!
 #
-TMPTIME=<%= debian_rcs_tmptime %>
-SULOGIN=<%= debian_rcs_sulogin ? 'yes' : 'no' %>
-DELAYLOGIN=<%= debian_rcs_delaylogin ? 'yes' : 'no' %>
-UTC=<%= debian_rcs_utc ? 'yes' : 'no' %>
-VERBOSE=<%= debian_rcs_verbose ? 'yes' : 'no' %>
-FSCKFIX=<%= debian_rcs_fsckfix ? 'yes' : 'no' %>
+TMPTIME=<%= @debian_rcs_tmptime %>
+SULOGIN=<%= @debian_rcs_sulogin ? 'yes' : 'no' %>
+DELAYLOGIN=<%= @debian_rcs_delaylogin ? 'yes' : 'no' %>
+UTC=<%= @debian_rcs_utc ? 'yes' : 'no' %>
+VERBOSE=<%= @debian_rcs_verbose ? 'yes' : 'no' %>
+FSCKFIX=<%= @debian_rcs_fsckfix ? 'yes' : 'no' %>
 #RAMRUN=no # OBSOLETE; see /etc/default/tmpfs and tmpfs(5).
 #RAMLOCK=no # OBSOLETE; see /etc/default/tmpfs and tmpfs(5).
-ASYNCMOUNTNFS=<%= debian_rcs_asyncmountnfs ? 'yes' : 'no' %>
+ASYNCMOUNTNFS=<%= @debian_rcs_asyncmountnfs ? 'yes' : 'no' %>
