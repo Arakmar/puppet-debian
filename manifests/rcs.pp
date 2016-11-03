@@ -19,7 +19,7 @@ class debian::rcs(
         ensure  => file,
         owner   => root,
         group   => root,
-        mode    => 444,
+        mode    => '444',
         content => template("debian/rcS.${::operatingsystem}-${::lsbdistcodename}.erb")
     }
 }

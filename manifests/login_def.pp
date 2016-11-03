@@ -6,7 +6,7 @@ class debian::login_def(
 	    ensure  => file,
 	    owner   => root,
 	    group   => root,
-	    mode    => 644,
+	    mode    => '644',
 	    content => template("debian/login.defs.erb")
 	}
 }

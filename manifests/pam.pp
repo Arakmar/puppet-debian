@@ -7,7 +7,7 @@ class debian::pam(
     ensure  => file,
     owner   => root,
     group   => root,
-    mode    => 644,
+    mode    => '644',
     content => template("debian/common-session.${::operatingsystem}-${::lsbdistcodename}.erb")
   }
 
